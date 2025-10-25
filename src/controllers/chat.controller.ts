@@ -30,7 +30,8 @@ export const getChats = async (req: CustomRequest, res: Response) => {
                 select: {
                     id: true,
                     name: true,
-                    avatar: true
+                    avatar: true,
+                    publicKey:true
                 }
             }
         }
