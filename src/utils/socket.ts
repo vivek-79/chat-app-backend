@@ -46,7 +46,7 @@ export const registerSocketHandlers = (io: Server) => {
                         })
                     )
                 ).filter(Boolean) as string[];
-                activeUserSocketIds.forEach((mem)=>{
+                activeUserSocketIds.forEach((mem:any)=>{
                     io.to(mem).emit('newMessage',data)
                 })
             }

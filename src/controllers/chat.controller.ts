@@ -221,7 +221,7 @@ export const getRandomUsers = async (req: CustomRequest, res: Response) => {
     })
 
     // Add custom field
-    const usersWithExtraField = activeUsers?.map(user => ({
+    const usersWithExtraField = activeUsers?.map((user:any) => ({
         ...user,
         isOnline: true,
     }))
@@ -252,7 +252,7 @@ export const getRandomUsers = async (req: CustomRequest, res: Response) => {
             skip: offlineSkip
         })
 
-        const remainingUsersWithExtraField = remainingUsers.map((user) => ({
+        const remainingUsersWithExtraField = remainingUsers.map((user:any) => ({
             ...user,
             isOnline: false
         }))
