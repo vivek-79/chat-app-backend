@@ -40,7 +40,7 @@ export const registerSocketHandlers = (io: Server) => {
                 // Getting socket id from redis
                 const activeUserSocketIds = (
                     await Promise.all(
-                        memberIds.map(async (mem) => {
+                        memberIds.map(async (mem:any) => {
                             const socketId = await redisClient.get(`active-user:${mem.id}`);
                             return socketId || null;
                         })
